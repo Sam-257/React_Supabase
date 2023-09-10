@@ -1,6 +1,6 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import CustomerCard from '../../Components/CustomerCard';
+import CustomerCard from '../../components/CustomerCard';
 
 type Props = {}
 
@@ -19,9 +19,9 @@ const url = "http://localhost:8080";
 const AllLoans = (props: Props) => {
   const [loans, setLoans] = useState<Loan[]>([]);
   useEffect(() => {
-    axios.get(`${url}/loans`)
-    .then((res) => setLoans(res.data))
-    .catch(err => console.log(err));
+    // axios.get(`${url}/loans`)
+    // .then((res) => setLoans(res.data))
+    // .catch(err => console.log(err));
     
   }, [])
   

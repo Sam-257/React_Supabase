@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import {useLocation} from 'react-router-dom';
-import ManagerCard from '../../Components/ManagerCard';
+import ManagerCard from '../../components/ManagerCard';
 
 type Props = {}
 
@@ -41,27 +41,27 @@ const LoansContainer = (props: Props) => {
   }, [location.pathname]);
 
   const allLoans = () => {
-    axios.get(`${url}/appliedNewLoans`)
-    .then((res) => {setLoanData(res.data);})
-    .catch(err => console.log(err));
+    // axios.get(`${url}/appliedNewLoans`)
+    // .then((res) => {setLoanData(res.data);})
+    // .catch(err => console.log(err));
   }
 
   const pendingLoans = () => {
-    axios.get(`${url}/appliedNewLoans`)
-    .then((res) => {setLoanData(res.data.filter((item:IAppliedLoans) => !(item.approved || item.rejected)));})
-    .catch(err => console.log(err));
+    // axios.get(`${url}/appliedNewLoans`)
+    // .then((res) => {setLoanData(res.data.filter((item:IAppliedLoans) => !(item.approved || item.rejected)));})
+    // .catch(err => console.log(err));
   }
 
   const approvedLoans = () => {
-    axios.get(`${url}/appliedNewLoans`)
-    .then((res) => {setLoanData(res.data.filter((item: IAppliedLoans) => item.approved));})
-    .catch(err => console.log(err));
+    // axios.get(`${url}/appliedNewLoans`)
+    // .then((res) => {setLoanData(res.data.filter((item: IAppliedLoans) => item.approved));})
+    // .catch(err => console.log(err));
   }
 
   const rejectedLoans = () => {
-    axios.get(`${url}/appliedNewLoans`)
-    .then((res) => {setLoanData(res.data.filter((item: IAppliedLoans) => item.rejected));})
-    .catch(err => console.log(err));
+    // axios.get(`${url}/appliedNewLoans`)
+    // .then((res) => {setLoanData(res.data.filter((item: IAppliedLoans) => item.rejected));})
+    // .catch(err => console.log(err));
   }
 
   const tabToFunc:any = {

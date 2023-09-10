@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React from 'react';
 import useStyles from './jss';
 
@@ -31,15 +31,15 @@ const ManagerCard = ({loan, getFunc}: Props) => {
     const classes = useStyles();
 
     const handleApproved = () => {
-        axios.patch(`${url}/appliedNewLoans/${loan.id}`, {"approved" : true}, {headers:{"content-type":"application/json"}})
-        .then(() => getFunc())
-        .catch((err) => console.log(err));
+        // axios.patch(`${url}/appliedNewLoans/${loan.id}`, {"approved" : true}, {headers:{"content-type":"application/json"}})
+        // .then(() => getFunc())
+        // .catch((err) => console.log(err));
     }
 
     const handleRejected = () => {
-        axios.patch(`${url}/appliedNewLoans/${loan.id}`, {"rejected" : true}, {headers:{"content-type":"application/json"}})
-        .then(() => getFunc())
-        .catch((err) => console.log(err));
+        // axios.patch(`${url}/appliedNewLoans/${loan.id}`, {"rejected" : true}, {headers:{"content-type":"application/json"}})
+        // .then(() => getFunc())
+        // .catch((err) => console.log(err));
     }
 
   return (

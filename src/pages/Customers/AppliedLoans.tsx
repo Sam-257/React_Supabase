@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import CustomerCard from '../../Components/CustomerCard';
+import CustomerCard from '../../components/CustomerCard';
 
 type Props = {}
 const url = "http://localhost:8080";
@@ -31,12 +31,12 @@ type IAppliedLoans = {
 const AppliedLoans = (props: Props) => {
   const [appliedLoans, setAppliedLoans] = useState<IAppliedLoans[]>([]);
   useEffect(() => {
-    axios.get(`${url}/appliedNewLoans`)
-    .then((res) => {
-      let temp = res.data.filter((item:IAppliedLoans) => item.email === sessionStorage.getItem('email'))
-      setAppliedLoans(temp);
-    })
-    .catch(err => console.log(err));
+    // axios.get(`${url}/appliedNewLoans`)
+    // .then((res) => {
+    //   let temp = res.data.filter((item:IAppliedLoans) => item.email === sessionStorage.getItem('email'))
+    //   setAppliedLoans(temp);
+    // })
+    // .catch(err => console.log(err));
     
   }, [])
   return (

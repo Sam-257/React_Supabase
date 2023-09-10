@@ -1,20 +1,22 @@
 import React from 'react';
 import './App.css';
-import Navbar from './Components/Navbar';
+import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Home from './Containers/Home/Home';
-import Login from './Containers/Login';
-import Register from './Containers/Register';
-import CustomerNavbar from './Components/CustomerNavbar';
-import AllLoans from './Containers/Customers/AllLoans';
-import AppliedLoans from './Containers/Customers/AppliedLoans';
-import ManagerNavBar from './Components/ManagerNavbar';
-import LoansContainer from './Containers/Manager/LoansContainer';
+import Home from './pages/Home/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import CustomerNavbar from './components/CustomerNavbar';
+import AllLoans from './pages/Customers/AllLoans';
+import AppliedLoans from './pages/Customers/AppliedLoans';
+import ManagerNavBar from './components/ManagerNavbar';
+import LoansContainer from './pages/Manager/LoansContainer';
 import PrivateCustomerRoute from './utils/PrivateRoutes/PrivateCustomerRoute';
 import PrivateManagerRoute from './utils/PrivateRoutes/PrivateManagerRoute';
-import ApplyNow from './Containers/Customers/ApplyNow';
+import ApplyNow from './pages/Customers/ApplyNow';
+import supabaseClient from './config/supabaseClient';
 
 const App = () => {
+  console.log(supabaseClient);
   return (
     <div className="App">
       <BrowserRouter>

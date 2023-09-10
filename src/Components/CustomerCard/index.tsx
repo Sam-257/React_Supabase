@@ -1,5 +1,3 @@
-import axios from 'axios';
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import useStyles from './jss';
 
@@ -41,9 +39,9 @@ const CustomerCard = ({loan, loans}: Props) => {
     const classes = useStyles();
     const navigate = useNavigate()
     const handleApply = () => {
-        axios.get(`${url}/appliedNewLoans`)
-        .then((res) => { !!res.data.find((item: any)=>item.email === sessionStorage.getItem('email') && item.title === loan.bankName)? alert(`You've already applied for this loan.`): navigate("/customer/applyNow", {state: {loans}})})
-        .catch(err => console.log(err));
+        // axios.get(`${url}/appliedNewLoans`)
+        // .then((res) => { !!res.data.find((item: any)=>item.email === sessionStorage.getItem('email') && item.title === loan.bankName)? alert(`You've already applied for this loan.`): navigate("/customer/applyNow", {state: {loans}})})
+        // .catch(err => console.log(err));
       };
 
   return (

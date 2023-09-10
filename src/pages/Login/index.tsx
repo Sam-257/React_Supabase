@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import useStyles from './jss';
 import { useNavigate } from 'react-router-dom';
 
@@ -23,11 +23,11 @@ const Login = (props: Props) => {
     const [userData, setUserData] = useState<User[]>([]);
 
     useEffect(() => {
-      axios.get(`${url}/user`)
-      .then((res) => {
-        setUserData(res.data);
-      })
-      .catch((err) => console.log(err));
+      // axios.get(`${url}/user`)
+      // .then((res) => {
+      //   setUserData(res.data);
+      // })
+      // .catch((err) => console.log(err));
     }, []);
 
     const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {

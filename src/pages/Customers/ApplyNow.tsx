@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { DownArrow, UpArrow } from "../../utils/PrivateRoutes/icons";
@@ -65,21 +65,20 @@ const ApplyNow = (props: Props) => {
   };
 
   const handleSubmit = () => {
-    
-    axios.post(`${url}/appliedNewLoans`, appliedLoanData,{headers:{"content-type": "application/json"}})
-    .then(() => navigate('/customer/appliedLoans'))
-    .catch(err=> console.log(err));
+    // axios.post(`${url}/appliedNewLoans`, appliedLoanData,{headers:{"content-type": "application/json"}})
+    // .then(() => navigate('/customer/appliedLoans'))
+    // .catch(err=> console.log(err));
   }
   useEffect(() => {
-    axios.get(`${url}/user`)
-    .then((res) => {
-        setAppliedLoanData(prevState => {return {...prevState, ...res.data.filter((item: any) => item.email === sessionStorage.getItem('email'))[0]}});
-        setAppliedLoanData(current => {
-            const {id, ...rest} = current;
-            return rest;
-          });
-})
-    .catch(err => console.log(err));
+//     axios.get(`${url}/user`)
+//     .then((res) => {
+//         setAppliedLoanData(prevState => {return {...prevState, ...res.data.filter((item: any) => item.email === sessionStorage.getItem('email'))[0]}});
+//         setAppliedLoanData(current => {
+//             const {id, ...rest} = current;
+//             return rest;
+//           });
+// })
+//     .catch(err => console.log(err));
   }, []);
 
   useEffect(() => {

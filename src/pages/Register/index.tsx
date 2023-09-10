@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React, {useState} from 'react'
 import useStyles from './jss';
 import {useNavigate} from 'react-router-dom';
@@ -16,12 +16,12 @@ const Register = (props: Props) => {
       };
 
     const handleSubmit = (e:any) => {
-        axios.post(`${url}/user`,registerForm)
-        .then((res) => {
-            alert('User Registered Successfully');
-            navigate('/login');
-        })
-        .catch(err => console.log(err))
+        // axios.post(`${url}/user`,registerForm)
+        // .then((res) => {
+        //     alert('User Registered Successfully');
+        //     navigate('/login');
+        // })
+        // .catch(err => console.log(err))
     }
   return (
     <div className={classes.content}>
